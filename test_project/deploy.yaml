@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local_repo/hr_benefits_agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      pod: hr-benefits-agent-pod
+  template:
+    metadata:
+      labels:
+        pod: hr-benefits-agent-pod
+    spec:
+      containers:
+      - name: hr-benefits-agent-container
+        image: local_repo/hr-benefits-agent:1

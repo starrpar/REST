@@ -1,0 +1,29 @@
+ToDo:
+- python algorithms (algorithms.py)
+- Docker/Kubernetes - execute a python script
+- other: 
+
+Done:
+- python file: practice_space.py
+- build image file: build_docker.cmd (docker buildx build . -t local_repo:palindrome_timing)
+- image has a tag (local_repo:palindrome_timing)
+- docker images: lists running images
+	(local_repo                                  palindrome_timing   63554dbc9a2f   About an hour ago   1.47GB)
+- execute python file via running image file - docker run local_repo:palindrome_timing
+	(container is what it runs in; if not interactive (-it) does NOT persist, so have to create
+	a python script that runs continuously - a microservice that stays up and accepts input/creates output)
+
+
+Next:
+- (1) create a persistent python microservice
+- (2) create deploy.yaml file to create Kubernetes deployment
+
+Alternatively:
+- (1) (partially DONE) build existing REST microservice in Docker
+- (2) create deploy.yaml file to create Kubernetes deployment
+
+Then:
+- run on a 3-node cluster in either Docker Desktop or Minikube
+- practice investigating / troubleshooting on nodes
+	(use kubectl logs, kubectl exec -it deploy/<service> -- sh)
+

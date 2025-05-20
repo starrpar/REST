@@ -1,0 +1,8 @@
+from project folder (C:\github\REST\test_project)...
+mvn clean
+mvn package
+java -jar .\target\restAPI-0.0.1-SNAPSHOT.jar
+...that causes the REST interface to be stood up at: http://localhost:8080/hello
+
+can also invoke that (in addition to from a browser), by using javascript (which uses FETCH)/running Node:
+node .\invoke_restapi.js
