@@ -1,0 +1,1 @@
+mysql -u root -pabcd1234 -e "use mydb; select * from user;"
