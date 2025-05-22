@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 7c851d49437e
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      pod: hrbenefitsagent-pod
+  template:
+    metadata:
+      labels:
+        pod: hrbenefitsagent-pod
+    spec:
+      containers:
+      - name: hrbenefitsagent-container
+        image: hrbenefitsagent2/localhost:latest
+        ports:
+        - containerPort: 8080

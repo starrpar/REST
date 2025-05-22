@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: local_repo/hr_benefits_agent
+  name: hrbenefitsagent
 spec:
   replicas: 3
   selector:
@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: hr-benefits-agent-container
-        image: local_repo/hr-benefits-agent:1
+        image: docker.io/starrparker/hrbenefitsagent:latest
